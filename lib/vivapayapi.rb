@@ -4,7 +4,7 @@ require 'httparty'
 module Vivapayapi
 	class Transaction
 		include HTTParty
-		base_uri "demo.vivapayments.com/api/"
+		base_uri "https://demo.vivapayments.com/api/"
 
 		def initialize(username, password)
 			@auth = {:username => username , :password => password }
