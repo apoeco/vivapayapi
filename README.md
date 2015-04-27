@@ -23,7 +23,8 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+transaction = Vivapayapi::Transaction.new("your_merchant_id_here","your_api_key_here")
+transaction.capture("your_vivaWalletToken_here")
 
 ## Development
 
