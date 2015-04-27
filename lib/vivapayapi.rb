@@ -4,7 +4,7 @@ require 'httparty'
 module VivaPayAPI
 	class Transaction
 		include HTTParty
-		base_uri "https://demo.vivapayments.com/api/"
+		base_uri "http://demo.vivapayments.com/api/"
 
 		def initialize(username, password)
 			@auth = {:username => username , :password => password }
@@ -14,7 +14,7 @@ module VivaPayAPI
 			@response = self.class.post("/transactions", 
 	        :basic_auth => @auth,
 			:body => {
-	        :PaymentToken => token}.to_json,
+			:PaymentToken => token}.to_json,
 	        :headers => { 'Content-Type' => 'application/json' },
 	        :debug_output => $stdout).parsed_response
 	        return @response
