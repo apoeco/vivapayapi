@@ -59,7 +59,7 @@ module VivaPayAPI
 			@response
 		end
 
-		def succesfull?
+		def successful?
 			unless @response.nil?
 				return @response["ErrorCode"]==0
 			end
