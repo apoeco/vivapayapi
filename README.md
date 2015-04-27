@@ -23,8 +23,15 @@ Or install it yourself as:
 
 ## Usage
 ```ruby
-transaction = Vivapayapi::Transaction.new("your_merchant_id_here","your_api_key_here")
+transaction = VivaPayAPI::Transaction.new("your_merchant_id_here","your_api_key_here")
 transaction.capture("your_vivaWalletToken_here")
+
+transaction.transaction_id #Returns the transactions id, nil if capture failed
+transaction.status #Returns the transactions status, nil if capture failed
+transaction.amount #Returns the transactions amount, nil if capture failed
+transaction.error_text #Returns the captures error text, nil if capture didnt happen
+transaction.error_code #Returns the captures error code, nil if capture didnt happen
+transaction.error_code #Returns the captures parsed response from HTTParty, nil if capture didnt happen
 ```
 ## Development
 
