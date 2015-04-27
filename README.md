@@ -31,7 +31,7 @@ transaction.status #Returns the transactions status, nil if capture failed
 transaction.amount #Returns the transactions amount, nil if capture failed
 transaction.error_text #Returns the captures error text, nil if capture didnt happen
 transaction.error_code #Returns the captures error code, nil if capture didnt happen
-transaction.error_code #Returns the captures parsed response from HTTParty, nil if capture didnt happen
+transaction.response #Returns the captures parsed response from HTTParty, nil if capture didnt happen
 ```
 ## Development
 
