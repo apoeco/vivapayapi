@@ -26,6 +26,7 @@ Or install it yourself as:
 transaction = VivaPayAPI::Transaction.new("your_merchant_id_here","your_api_key_here")
 transaction.capture("your_vivaWalletToken_here")
 
+transaction.succesfull? #Returns returns true if error code equals to 0, nil if capture failed
 transaction.transaction_id #Returns the transactions id, nil if capture failed
 transaction.status #Returns the transactions status, nil if capture failed
 transaction.amount #Returns the transactions amount, nil if capture failed
