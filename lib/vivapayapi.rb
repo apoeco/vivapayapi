@@ -6,7 +6,7 @@ module Vivapayapi
 	base_uri "https://demo.vivapayments.com/api/"
 
 	def initialize(username, password)
-		@auth = {:username => "329f4c1f-d0f7-43cf-ad77-c680297cf84a" , :password => "kv9kO?" }
+		@auth = {:username => username , :password => password }
 	end
 
 	def self.capture(token)
