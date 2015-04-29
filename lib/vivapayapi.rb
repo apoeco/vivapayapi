@@ -61,7 +61,7 @@ module VivaPayAPI
 
 		def successful?
 			unless @response.nil?
-				return @response["ErrorCode"]==0
+				return (@response["ErrorCode"]==0 && @response["StatusId"] == "F")
 			end
 			return nil
 		end
