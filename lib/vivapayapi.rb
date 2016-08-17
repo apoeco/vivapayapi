@@ -12,12 +12,12 @@ module VivaPayAPI
 
 		def capture(token)
 			@response = self.class.post("/transactions", 
-	        :basic_auth => @auth,
-			:body => {
-			:PaymentToken => token}.to_json,
-	        :headers => { 'Content-Type' => 'application/json' },
-	        :debug_output => $stdout).parsed_response
-	        return @response
+		        :basic_auth => @auth,
+				:body => {
+				:PaymentToken => token}.to_json,
+		        :headers => { 'Content-Type' => 'application/json' },
+		        :debug_output => $stdout).parsed_response
+		        return @response
 		end
 
 		def transaction_id
